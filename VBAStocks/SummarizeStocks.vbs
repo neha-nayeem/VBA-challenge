@@ -80,7 +80,7 @@ Sub SummarizeStocks()
                     
                 Else
                     MsgBox ("Percent change error: There is an opening price of 0! Please check row" + Str(i) + " in ticker: " + Ticker)
-                    PercentChange = 0       'Set a default value if it stock open price is 0 to override error
+                    PercentChange = 0       'Set a default value if stock open price is 0 to override error
                 
                 End If
                 
