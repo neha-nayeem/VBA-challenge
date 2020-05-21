@@ -4,7 +4,7 @@
 
 This VBA script analyses annual stock market data and does the following:
 * Outputs a summary table with the unique ticker symbol, yearly change, percent change and total stock volume of the ticker
-* The <Yearly Change> fields will be highlighted in green if it was a positive change, or red for a negative change
+* The Yearly Change field will be highlighted in green if it was a positive change, or red for a negative change
 
 All challenges have been completed in the SummarizeStocks.vbs file
 
