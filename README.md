@@ -19,11 +19,11 @@ Notes to consider:
 
 * In the file Multiple_year_stock_data.xlsm however, the PLNT ticker has its first opening price on 6 August 2015. Any values before this date are zero and follows the same as above (see 2014 summary table on Multiple_year_stock_data.xlsm)
 
-* Percentages have been formatted as 0.00%
+* Percentages have been formatted as 0.00% and Yearly Change as $#,##0.00
 
 ## Challenge 2
 
-Challenge 2 is to run the VBA script on all worksheets at one go. This was done by defining the worksheet variable as ws, and then running a for loop to go through each worksheet. All local objects are called with "ws." followed by the worksheet object
+Challenge 2 is to run the VBA script on all worksheets in one go. This was done by defining the worksheet variable as ws, and then running a for loop to go through each worksheet. All local objects are called with "ws." followed by the worksheet object
 
 ## Screenshots of each year's summary
 
