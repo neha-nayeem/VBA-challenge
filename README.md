@@ -8,18 +8,18 @@ This VBA script analyses annual stock market data and does the following:
 
 All challenges have been completed in the SummarizeStocks.vbs file
 
-
-## Challenge 1
-
-Challenge 1 is a second summary table that would display the greatest % increase, the greatest % decrease and the greatest stock volume from the previous summary table. 
-
 Notes to consider:
+* It is assumed that the data is sorted by the ticker symbol in alphabetical order, followed by the date in chronological order. 
 
 * While testing on the file alphabetical_testing.xlsm, it was observed that all the values for the ticker with symbol PLNT are zero, thus giving an error while calculating percent change (division by zero). An if statement was added to check division by zero and when percent change is being calculated, a message box will now pop up identifying the ticker and row with the zero value. Then a value of zero is assumed for percent change to avoid it copying the previous percent change value and will be displayed as such on the summary table.
 
 * In the file Multiple_year_stock_data.xlsm however, the PLNT ticker has its first opening price on 6 August 2015. Any values before this date are zero and follows the same as above (see 2014 summary table on Multiple_year_stock_data.xlsm)
 
 * Percentages have been formatted as 0.00% and Yearly Change as $#,##0.00
+
+## Challenge 1
+
+Challenge 1 is a second summary table that would display the greatest % increase, the greatest % decrease and the greatest stock volume from the previous summary table. These values are calculated by comparing percent changes in each row of the previous summary table, as well as total volume.
 
 ## Challenge 2
 
