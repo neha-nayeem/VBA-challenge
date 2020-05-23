@@ -29,7 +29,7 @@ Sub SummarizeStocks()
         ws.Range("Q1").Value = "Value"
     
         '--- Find the last row in the worksheet and assign to LastRow ---
-        LastRow = ws.Range("A1").End(xlDown).Row
+        LastRow = ws.Cells(Rows.Count, 1).End(xlUp).Row
     
         '--- Assign initial values to variables ---
         Ticker = ws.Range("A2").Value
