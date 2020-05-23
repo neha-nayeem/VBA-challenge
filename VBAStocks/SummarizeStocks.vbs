@@ -29,7 +29,7 @@ Sub SummarizeStocks()
         ws.Range("Q1").Value = "Value"
     
         '--- Find the last row in the worksheet and assign to LastRow ---
-        LastRow = ws.Cells(Rows.Count, 1).End(xlUp).Row
+        LastRow = ws.Range("A1").End(xlDown).Row
     
         '--- Assign initial values to variables ---
         Ticker = ws.Range("A2").Value
@@ -62,8 +62,8 @@ Sub SummarizeStocks()
                 '--- Calculate total stock volume ---
                 TotalVolume = TotalVolume + Volume
             
-            '--- Conditional statement to check whether the next row's ticker value is NOT the same i.e. the current ticker has ended ---
-            ElseIf Ticker <> ws.Cells(i + 1, 1).Value Then
+            '--- Else statement when the next row's ticker value is NOT the same i.e. the current ticker has ended ---
+            Else
         
                 '--- Assign volume and closing price from this row (end of year value) from worksheet ---
                 StockClose = ws.Cells(i, 6).Value
@@ -80,7 +80,7 @@ Sub SummarizeStocks()
                     
                 Else
                     MsgBox ("Percent change error: There is an opening price of 0! Please check row" + Str(i) + " in ticker: " + Ticker)
-                    PercentChange = 0       'Set a default value if stock open price is 0 to override error
+                    PercentChange = 0       'Set a default value if it stock open price is 0 to override error
                 
                 End If
                 
